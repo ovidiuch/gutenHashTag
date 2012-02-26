@@ -43,19 +43,22 @@ class City
 	}
 	public static function sort($cities)
 	{
-		$first = -1;
+		$i = 0;
+		$hour = 24;
 
 		foreach($cities as $k => $city)
 		{
-			if($city->get_period() == 'morning')
+			if($city->get_period() != 'morning'
+			|| $city->get_hour() >= $hour)
 			{
-				$first = $k;
-
-				break;
+				continue;
 			}
+			$i = $k;
+
+			$hour = $city->get_hour();
 		}
-		$before = array_slice($cities, 0, $first);
-		$after = array_slice($cities, $first);
+		$before = array_slice($cities, 0, $i);
+		$after = array_slice($cities, $i);
 
 		return array_merge($after, $before);
 	}
