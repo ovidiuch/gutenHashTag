@@ -1,0 +1,255 @@
+Honolulu
+
+	zone: -10
+
+	morning: aloha
+	afternoon: aloha
+	evening: aloha
+	night: aloha
+
+Vancouver
+
+	zone: -8
+
+	morning: good morning
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
+
+Los Angeles
+
+	zone: -8
+
+	morning: good morning
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
+
+Mexico City
+
+	zone: -6
+
+	morning: buenos días
+	afternoon: buenas tardes
+	evening: buenas noches
+	night: buenas noches
+
+New York
+
+	zone: -5
+
+	morning: good morning
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
+
+São Paulo
+
+	zone: -3
+
+	morning: bom dia
+	afternoon: bom tarde
+	evening: bom noite
+	night: bom noite
+
+Reykjavík
+
+	morning: Góðan dag
+	afternoon: Góðan dag
+	evening: gott kvöld
+	night: góða nótt
+
+London
+
+	morning: top of the morning
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
+
+Barcelona
+
+	zone: 1
+
+	morning: buenos días
+	afternoon: buenas tardes
+	evening: buenas noches
+	night: buenas noches
+
+Paris
+
+	zone: 1
+
+	morning: bonjour
+	afternoon: bonjour
+	evening: bonsoir
+	night: bonne nuit
+
+Amsterdam
+
+	zone: 1
+
+	morning: goedemorgen
+	afternoon: goedemiddag
+	evening: goedenavond
+	night: goedenacht
+
+Venice
+
+	zone: 1
+
+	morning: buongiorno
+	afternoon: buon pomeriggio
+	evening: buonasera
+	night: buonanotte
+
+Berlin
+
+	zone: 1
+
+	morning: guten Morgen
+	afternoon: guten Tag
+	evening: guten Abend
+	night: guten Nacht
+
+Stockholm
+
+	zone: 1
+
+	morning: god morgon
+	afternoon: god ettermiddag
+	evening: god kveld
+	night: god natt
+
+Cape Town
+
+	zone: 2
+
+	morning: goeie môre
+	afternoon: goeie middag
+	evening: goeie aand
+	night: goeie nag
+
+Athens
+
+	zone: 2
+
+	morning: καλημέρα
+	afternoon: καλημέρα
+	evening: καλησπέρα
+	night: καληνύχτα
+
+Bucharest
+
+	zone: 2
+
+	morning: neața
+	afternoon: bună ziua
+	evening: bună seara
+	night: noapte bună
+
+Istanbul
+
+	zone: 2
+
+	morning: sabah iyi
+	afternoon: iyi akşamlar
+	evening: iyi geceler
+	night: iyi geceler
+
+Moscow
+
+	zone: 4
+
+	morning: доброе утро
+	afternoon: добрый день
+	evening: добрый вечер
+	night: спокойной ночи
+
+Dubai
+
+	zone: 4
+	font: arial.ttf
+	side: right
+
+	morning: صباح الخير
+	afternoon: ليلة سعيدة
+	evening: مساء الخير.
+	night: ليلة سعيدة
+
+Mumbai
+
+	zone: 5.5
+	font: mangal.ttf
+
+	morning: सुप्रभात
+	afternoon: नमस्कार
+	evening: गुड ईवनिंग.
+	night: शुभ रात्रि
+
+Bangkok
+
+	zone: 7
+	font: garunda.ttf
+
+	morning: ดีตอนเช้า
+	afternoon: สวัสดี
+	evening: สวัสดี
+	night: ราตรีสวัสดิ์
+
+Singapore
+
+	zone: 8
+
+	morning: good morning
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
+
+Hong Kong
+
+	zone: 8
+	font: simsun.ttc
+
+	morning: 早安
+	afternoon: 下午好
+	evening: 晚上好
+	night: 晚安
+
+Seoul
+
+	zone: 9
+	font: UnBatangOdal.ttf
+
+	morning: 아침 인사
+	afternoon: 안녕하세요
+	evening: 안녕하세요
+	night: 안녕히 주무세요
+
+Tokyo
+
+	zone: 9
+	font: simsun.ttc
+
+	morning: おはようございます
+	afternoon: こんにちは
+	evening: こんばんは
+	night: おやすみ
+
+Sydney
+
+	zone: 10
+
+	morning: good morning
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
+
+Fiji
+
+	zone: 12
+	city: Suva
+
+	morning: ni sa yadra
+	afternoon: good afternoon
+	evening: good evening
+	night: good night
