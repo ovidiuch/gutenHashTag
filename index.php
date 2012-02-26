@@ -12,11 +12,11 @@ $cities = City::get('cities.txt');
 
 // Img
 
-$img = imagecreatetruecolor(800, count($cities) * 72 + 15);
+$img = imagecreatetruecolor(320, ceil(count($cities) / 2) * 46 + 6);
 
 // Background
 
-$bg = imagecolorallocate($img, 11, 11, 11);
+$bg = imagecolorallocate($img, 10, 10, 10);
 
 imagefill($img, 0, 0, $bg);
 
@@ -25,12 +25,14 @@ imagefill($img, 0, 0, $bg);
 $bold_font = 'OpenSans-Bold.ttf';
 $light_font = 'OpenSans-Light.ttf';
 
-$m_size = 15;
-$c_size = 22;
+$m_size = 10;
+$c_size = 14;
 
 // Text
 
 $i = 0;
+$x = 0;
+$y = 0;
 
 foreach($cities as $city)
 {
@@ -43,11 +45,17 @@ foreach($cities as $city)
 	$gray = imagecolorallocate($img, $g, $g, $g);
 	$dark = imagecolorallocate($img, 75, 75, 75);
 
-	$offset = $i++ * 72;
+	if($i && $i % 2 == 0)
+	{
+		$x = 0;
+		$y += 46;
+	}
+	imagettftext($img, $m_size, 0, 10 + $x, 20 + $y, $gray, "fonts/{$city->font}", $city->get_message());
+	imagettftext($img, $c_size, 0, 10 + $x, 40 + $y, $dark, "fonts/$light_font", '#');
+	imagettftext($img, $c_size, 0, 22 + $x, 40 + $y, $white, "fonts/$bold_font", $city->name);
 
-	imagettftext($img, $m_size, 0, 16, 30 + $offset, $gray, "fonts/{$city->font}", $city->get_message());
-	imagettftext($img, $c_size, 0, 15, 62 + $offset, $dark, "fonts/$light_font", '#');
-	imagettftext($img, $c_size, 0, 35, 62 + $offset, $white, "fonts/$bold_font", $city->name);
+	$i++;
+	$x += 140;
 }
 
 // Header
