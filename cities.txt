@@ -168,7 +168,7 @@ Moscow
 Dubai
 
 	zone: 4
-	font: arial.ttf
+	font: homa.ttf
 	side: right
 
 	morning: صباح الخير

@@ -12,7 +12,7 @@ $cities = City::get('cities.txt');
 
 // Img
 
-$img = imagecreatetruecolor(320, ceil(count($cities) / 2) * 46 + 6);
+$img = imagecreatetruecolor(300, ceil(count($cities) / 2) * 46 + 6);
 
 // Background
 
