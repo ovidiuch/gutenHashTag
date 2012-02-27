@@ -58,6 +58,15 @@ foreach($cities as $city)
 	$x += 140;
 }
 
+// Save
+
+$path = 'exports/' . time() . '.jpg';
+
+if(!imagejpeg($img, $path, 100))
+{
+	exit;
+}
+
 // Header
 
 header('Content-Type: image/jpeg');
