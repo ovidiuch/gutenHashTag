@@ -19,6 +19,10 @@ $tmhOAuth = new tmhOAuth(array
 
 // Path
 
+if(!is_dir('exports') && !mkdir('exports'))
+{
+	exit;
+}
 $pathinfo = pathinfo
 (
 	$path = 'exports/' . time() . '.jpg'
