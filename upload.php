@@ -1,9 +1,11 @@
 <?php
 
+include('map.php');
+
 // Lib
 
-require('lib/tmhOAuth/tmhOAuth.php');
-require('lib/tmhOAuth/tmhUtilities.php');
+include('lib/tmhOAuth/tmhOAuth.php');
+include('lib/tmhOAuth/tmhUtilities.php');
 
 // Auth
 
@@ -24,9 +26,9 @@ $pathinfo = pathinfo
 
 // Generate
 
-$url = 'http://localhost/gutenHashTag/generate.php';
+$map = new Map();
 
-if(!file_get_contents("$url?path=$path") || !$path = realpath($path))
+if(!$map->save($path) || !$path = realpath($path))
 {
 	exit;
 }
