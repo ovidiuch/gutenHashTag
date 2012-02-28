@@ -60,9 +60,12 @@ foreach($cities as $city)
 
 // Save
 
-if(is_dir('exports') || mkdir('exports'))
+if(!empty($_GET['path']))
 {
-	imagejpeg($img, 'exports/' . time() . '.jpg', 100);
+	if(!imagejpeg($img, $_GET['path'], 100))
+	{
+		exit;
+	}
 }
 
 // Header
