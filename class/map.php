@@ -1,7 +1,5 @@
 <?php
 
-include('city.php');
-
 class Map
 {
 	private $cities;

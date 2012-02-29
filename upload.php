@@ -1,20 +1,25 @@
 <?php
 
-include('map.php');
-
 // Lib
 
 include('lib/tmhOAuth/tmhOAuth.php');
 include('lib/tmhOAuth/tmhUtilities.php');
 
+include('class/city.php');
+include('class/map.php');
+
+// Config
+
+include('config.php');
+
 // Auth
 
 $tmhOAuth = new tmhOAuth(array
 (
-	'consumer_key' => 'xxxxxx',
-	'consumer_secret' => 'xxxxxx',
-	'user_token' => 'xxxxxx',
-	'user_secret' => 'xxxxxx',
+	'consumer_key' => $consumer_key,
+	'consumer_secret' => $consumer_secret,
+	'user_token' => $user_token,
+	'user_secret' => $user_secret,
 ));
 
 // Path
@@ -27,10 +32,11 @@ $pathinfo = pathinfo
 (
 	$path = 'exports/' . time() . '.jpg'
 );
+$name = $pathinfo['basename'];
 
-// Generate
+// Map
 
-$map = new Map();
+$map = new Map;
 
 if(!$map->save($path) || !$path = realpath($path))
 {
@@ -39,9 +45,15 @@ if(!$map->save($path) || !$path = realpath($path))
 
 // Params
 
+$image = array
+(
+	"@$path",
+	'type=image/jpeg',
+	"filename=$name"
+);
 $params = array
 (
-	'image' => "@$path;type=image/jpeg;filename={$pathinfo['basename']}",
+	'image' => implode(';', $image),
 	'use' => 'true'
 );
 
