@@ -92,9 +92,11 @@ class Map
 			(
 				'#', $this->light, $this->big, $dark, $x, $y + 20
 			);
+			$city_name = str_replace(' ', '', $city->name);
+
 			$this->write
 			(
-				$city->name, $this->bold, $this->big, $light, $x + 12, $y + 20
+				$city_name, $this->bold, $this->big, $light, $x + 12, $y + 20
 			);
 			$x += 140;
 		}
