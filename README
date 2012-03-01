@@ -21,7 +21,7 @@ Replace vars with keys from your Twitter app...
 
 > mkdir exports
 
-Give ownership to webserver (Apache on Debian here) for "exports" dir
+Give ownership to webserver (Apache on Debian here) on "exports" dir
 
 (consult /etc/passwd for actual username)
 
