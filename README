@@ -1,0 +1,45 @@
+gutenHashTag - dynamic Twitter background
+
+by @skidding Ovidiu Chereches
+
+Requires PHP 5.something with GD.
+
+
+UNIX instructions for installing:
+
+> cd /path/to/gutenhashtag
+
+> git clone git@github.com:skidding/gutenHashTag.git .
+
+> cp config.sample.php config.php
+
+> vim config.php
+
+Replace vars with keys from your Twitter app...
+
+> :wq
+
+> mkdir exports
+
+Give ownership to webserver (Apache on Debian here) for "exports" dir
+
+(consult /etc/passwd for actual username)
+
+> chown www-data:www-data exports
+
+or be a douche and give full permissions to everyone
+
+> chmod 777 exports
+
+> export EDITOR=vim
+
+> crontab -e
+
+Add this line at the bottom of the file:
+
+*/15 * * * * cd /path/to/gutenhashtag && php -f upload.php
+
+> :wq
+
+
+kthbye
